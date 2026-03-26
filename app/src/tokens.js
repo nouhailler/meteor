@@ -1,0 +1,120 @@
+// ─── tokens.js — Design system partagé (extrait du config Tailwind Stitch) ───
+export const t = {
+  background:               "#060e20",
+  surface:                  "#060e20",
+  surfaceContainer:         "#0c1934",
+  surfaceContainerHigh:     "#101e3e",
+  surfaceContainerHighest:  "#142449",
+  surfaceContainerLow:      "#081329",
+  surfaceBright:            "#172b54",
+  primary:                  "#5bb1ff",
+  primaryContainer:         "#44a3f5",
+  primaryFixedDim:          "#71b8ff",
+  secondary:                "#c5c0ff",
+  secondaryDim:             "#6d60e9",
+  secondaryContainer:       "#1d0084",
+  tertiary:                 "#ffedb7",
+  tertiaryDim:              "#f0cf59",
+  tertiaryFixed:            "#ffde65",
+  onBackground:             "#dee5ff",
+  onSurface:                "#dee5ff",
+  onSurfaceVariant:         "#9baad6",
+  onPrimary:                "#002e4f",
+  onPrimaryContainer:       "#00223c",
+  outline:                  "#65759e",
+  outlineVariant:           "#38476d",
+  error:                    "#ff716c",
+  glass:                    "rgba(20,36,73,0.45)",
+  glassDark:                "rgba(8,19,41,0.4)",
+};
+
+// ─── Styles communs réutilisables ──────────────────────────────────────────────
+export const shared = {
+  sidebar: {
+    position:"fixed", left:0, top:0, height:"100%", width:256,
+    display:"flex", flexDirection:"column", padding:16,
+    backgroundColor:"rgba(6,14,32,0.75)",
+    backdropFilter:"blur(24px)", WebkitBackdropFilter:"blur(24px)",
+    borderRight:"1px solid rgba(255,255,255,0.08)", zIndex:50,
+  },
+  logoTitle: {
+    fontSize:22, fontWeight:900, color:t.primary,
+    letterSpacing:"-0.05em", fontFamily:"'Manrope',sans-serif",
+    margin:0, lineHeight:1,
+  },
+  logoSub: {
+    fontSize:11, color:t.onSurfaceVariant, letterSpacing:"0.02em", margin:"4px 0 0",
+  },
+  nav: { flex:1, display:"flex", flexDirection:"column", gap:6, marginTop:16 },
+  navActive: {
+    display:"flex", alignItems:"center", gap:12, padding:"12px 16px",
+    backgroundColor:"rgba(91,177,255,0.15)", color:t.primaryFixedDim,
+    borderRadius:12, border:"1px solid rgba(91,177,255,0.2)",
+    fontSize:14, fontWeight:600, fontFamily:"'Manrope',sans-serif",
+    cursor:"pointer", textDecoration:"none", transition:"all 0.2s",
+  },
+  navItem: {
+    display:"flex", alignItems:"center", gap:12, padding:"12px 16px",
+    color:t.onSurfaceVariant, borderRadius:12,
+    fontSize:14, fontFamily:"'Manrope',sans-serif",
+    cursor:"pointer", textDecoration:"none", transition:"all 0.2s",
+  },
+  proBanner: {
+    marginTop:"auto", padding:16,
+    background:t.glass, backdropFilter:"blur(20px)", WebkitBackdropFilter:"blur(20px)",
+    borderRadius:16, border:"1px solid rgba(255,255,255,0.05)", textAlign:"center",
+  },
+  proBtn: {
+    width:"100%", padding:"8px 0", backgroundColor:t.primaryContainer,
+    color:t.onPrimaryContainer, borderRadius:12, fontSize:13, fontWeight:700,
+    fontFamily:"'Manrope',sans-serif", border:"none", cursor:"pointer",
+  },
+  header: {
+    position:"sticky", top:0, zIndex:40, height:80,
+    backgroundColor:"rgba(6,14,32,0.5)",
+    backdropFilter:"blur(20px)", WebkitBackdropFilter:"blur(20px)",
+    display:"flex", justifyContent:"space-between", alignItems:"center",
+    padding:"0 32px", borderBottom:"1px solid rgba(255,255,255,0.04)",
+  },
+  searchWrap: { position:"relative", width:380 },
+  searchIcon: {
+    position:"absolute", left:16, top:"50%", transform:"translateY(-50%)",
+    color:t.onSurfaceVariant, fontSize:20, pointerEvents:"none",
+  },
+  searchInput: {
+    width:"100%", backgroundColor:t.surfaceContainerHighest, border:"none",
+    borderRadius:9999, padding:"10px 16px 10px 48px", fontSize:14,
+    color:t.onSurface, outline:"none", boxSizing:"border-box",
+    fontFamily:"'Inter',sans-serif",
+  },
+  headerActions: { display:"flex", alignItems:"center", gap:24 },
+  iconBtn: {
+    background:"none", border:"none", color:t.onSurfaceVariant,
+    cursor:"pointer", padding:4, borderRadius:8, transition:"color 0.2s", display:"flex",
+  },
+  avatar: {
+    width:40, height:40, borderRadius:"50%", backgroundColor:t.surfaceContainerHigh,
+    border:"1px solid rgba(255,255,255,0.1)", display:"flex",
+    alignItems:"center", justifyContent:"center",
+    color:t.primary, fontSize:14, fontWeight:700, fontFamily:"'Manrope',sans-serif",
+  },
+  main: { paddingLeft:256, minHeight:"100vh", width:"100%", position:"relative", zIndex:1 },
+  content: { padding:32, maxWidth:1280, margin:"0 auto" },
+  pageTitle: {
+    fontSize:48, fontWeight:900, fontFamily:"'Manrope',sans-serif",
+    color:"#ffffff", letterSpacing:"-0.04em", margin:"0 0 8px",
+  },
+  pageSub: { fontSize:15, color:t.onSurfaceVariant, margin:0 },
+  glass: {
+    background:t.glass, backdropFilter:"blur(20px)", WebkitBackdropFilter:"blur(20px)",
+    borderRadius:24, border:"1px solid rgba(255,255,255,0.07)",
+  },
+  glassDark: {
+    background:t.glassDark, backdropFilter:"blur(24px)", WebkitBackdropFilter:"blur(24px)",
+    borderRadius:24, border:"1px solid rgba(255,255,255,0.05)",
+  },
+  sectionTitle: {
+    fontSize:20, fontWeight:700, fontFamily:"'Manrope',sans-serif",
+    color:t.onSurface, margin:"0 0 16px",
+  },
+};

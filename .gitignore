@@ -13,3 +13,5 @@ yarn-error.log*
 *.AppImage
 release/
 out/
+electron-wrapper/
+stitch_export1.py
