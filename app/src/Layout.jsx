@@ -26,8 +26,8 @@ export default function Layout({ page, onNavigate, children }) {
 
       <aside style={shared.sidebar}>
         <div style={{ marginBottom:32, paddingLeft:16 }}>
-          <h1 style={shared.logoTitle}>Atmosphere</h1>
-          <p style={shared.logoSub}>Local Weather</p>
+          <h1 style={shared.logoTitle}>Meteor</h1>
+          <p style={shared.logoSub}>Local Weather · Open Source</p>
         </div>
         <nav style={shared.nav}>
           {NAV_ITEMS.map(item => (
@@ -39,9 +39,8 @@ export default function Layout({ page, onNavigate, children }) {
             </a>
           ))}
         </nav>
-        <div style={shared.proBanner}>
-          <p style={{fontSize:12,color:t.onSurfaceVariant,marginBottom:10}}>Obtenez une précision avancée</p>
-          <button style={shared.proBtn}>Passer à la version Pro</button>
+        <div style={{ marginTop:"auto", padding:"12px 16px", fontSize:11, color:t.onSurfaceVariant, textAlign:"center" }}>
+          Meteor v1.1 · Open-Meteo · OSM
         </div>
       </aside>
 

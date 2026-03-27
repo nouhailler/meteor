@@ -30,9 +30,32 @@ function useGlobalStyles() {
         .whc:hover { background-color:#101e3e!important; }
         .wwc:hover { border-color:rgba(91,177,255,0.25)!important; }
         .page-enter { animation: fadeInUp 0.35s ease forwards; }
-        ::-webkit-scrollbar { width:4px; height:4px; }
-        ::-webkit-scrollbar-track { background:transparent; }
-        ::-webkit-scrollbar-thumb { background:#38476d; border-radius:10px; }
+
+        /* ── Scrollbar large et cliquable ── */
+        ::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: rgba(255,255,255,0.03);
+          border-radius: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #38476d;
+          border-radius: 8px;
+          border: 2px solid transparent;
+          background-clip: content-box;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: #5bb1ff;
+          background-clip: content-box;
+          border: 2px solid transparent;
+        }
+        /* Firefox */
+        * {
+          scrollbar-width: thin;
+          scrollbar-color: #38476d rgba(255,255,255,0.03);
+        }
       `;
       document.head.appendChild(el);
     }
@@ -41,7 +64,7 @@ function useGlobalStyles() {
 
 function PageContent({ page }) {
   switch (page) {
-    case "dashboard":  return <WeatherDashboard />;   // gère son propre layout
+    case "dashboard":  return <WeatherDashboard />;
     case "cartes":     return <CartesPage />;
     case "air":        return <AirPage />;
     case "historique": return <HistoriquePage />;
@@ -51,7 +74,7 @@ function PageContent({ page }) {
 }
 
 function AppInner() {
-  const [page, setPage]       = useState("dashboard");
+  const [page, setPage]         = useState("dashboard");
   const [transKey, setTransKey] = useState(0);
   useGlobalStyles();
 
@@ -78,7 +101,6 @@ function AppInner() {
   );
 }
 
-// WeatherProvider enveloppe toute l'app — toutes les pages accèdent au Context
 export default function App() {
   return (
     <WeatherProvider>
