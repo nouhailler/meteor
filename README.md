@@ -39,9 +39,10 @@ sudo dpkg -i atmosphere-weather_1.1.0_all.deb
 sudo apt install -f
 # Lancez l'application
 atmosphere-weather
-\`\`\`
+```
 
 L'application démarre un serveur local sur le port 8080 et ouvre automatiquement votre navigateur.
+```
 
 ---
 
@@ -88,6 +89,7 @@ L'application démarre un serveur local sur le port 8080 et ouvre automatiquemen
 ---
 
 ## 📁 Architecture du projet
+```
 
 atmosphere-weather/
 ├── app/                         # Code source React
@@ -118,27 +120,28 @@ atmosphere-weather/
 │   ├── build-deb.sh
 │   └── push-github.sh
 └── README.md
+```
 
 
 ---
 
 ## 🧪 Commandes de développement
 
-\`\`\`bash
+```bash
 npm run dev      # Serveur de développement (hot-reload)
 npm run build    # Build de production → app/dist/
 npm run preview  # Prévisualiser le build
-\`\`\`
+```
 
 ---
 
 ## 📦 Créer le paquet Debian
 
-\`\`\`bash
+```bash
 cd ~/claude-workspace/meteor
 bash packaging/build-deb.sh
 sudo dpkg -i atmosphere-weather_1.1.0_all.deb
-\`\`\`
+```
 
 ---
 
@@ -171,4 +174,4 @@ Distribué sous licence MIT. Voir \`LICENSE\` pour plus d'informations.
 
 **Projet maintenu par [Patrick Favre](https://github.com/nouhailler)**  
 N'hésitez pas à ouvrir une issue pour signaler un bug ou proposer une amélioration !
-EOF
+
