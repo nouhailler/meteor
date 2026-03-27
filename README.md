@@ -1,4 +1,3 @@
-cat > ~/claude-workspace/meteor/README.md << 'EOF'
 # 🌤️ Atmosphere — Tableau de bord météo
 
 [![Version](https://img.shields.io/badge/version-1.1.0-blue)](https://github.com/nouhailler/atmosphere-weather/releases)
