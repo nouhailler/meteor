@@ -198,5 +198,5 @@ Distribué sous licence **MIT**. Voir `LICENSE` pour plus d'informations.
 
 ---
 
-**Projet maintenu par [Patrick Favre](https://github.com/nouhailler)**  
+**Projet maintenu par [Patrick](https://github.com/nouhailler)**  
 Aucun compte requis · Aucune clé API · 100% open source
